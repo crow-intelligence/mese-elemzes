@@ -18,3 +18,4 @@ def generate_with_seed(seed="Szegény", length=100):
 print(generate_sequence())
 print()
 print(generate_with_seed())
+print(generate_with_seed(seed="A", length=300))
