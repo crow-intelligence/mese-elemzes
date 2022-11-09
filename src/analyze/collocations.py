@@ -14,7 +14,7 @@ fourgram_measures = nltk.collocations.QuadgramAssocMeasures()
 # bigrams
 bg_finder = BigramCollocationFinder.from_words(corpus.words())
 bg_finder.apply_freq_filter(5)
-ignored_words = nltk.corpus.stopwords.words('hungarian')
+ignored_words = nltk.corpus.stopwords.words("hungarian")
 bg_finder.apply_word_filter(lambda w: len(w) < 3 or w.lower() in ignored_words)
 bigram_collocations = bg_finder.nbest(bigram_measures.pmi, 10000)
 
@@ -49,4 +49,3 @@ for e in tgs:
 
 for e in fgs:
     print(f"fourgram collocate {e}")
-

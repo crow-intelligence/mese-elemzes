@@ -22,5 +22,7 @@ get_concordance("legény", "legény.txt")
 get_concordance(["szegény", "legény"], "szlegyény.txt")
 
 # ha nem akarjuk elmenteni, csak nézni az outputot
-text.concordance("legény", width=120, lines=100) # width a karakterek számát, lines a kiírt sorokat szabályozza
+text.concordance(
+    "legény", width=120, lines=100
+)  # width a karakterek számát, lines a kiírt sorokat szabályozza
 text.concordance(["szegény", "legény"], width=120, lines=100)
