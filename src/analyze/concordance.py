@@ -3,7 +3,7 @@ from nltk.text import Text
 
 # A concordance view shows us every occurrence of a given word, together with some context.
 # https://www.nltk.org/howto/concordance.html
-corpus = PlaintextCorpusReader("data/processed/", ".*", encoding="utf-8")
+corpus = PlaintextCorpusReader("data/interim/", ".*", encoding="utf-8")
 text = Text(corpus.words())
 
 
@@ -18,11 +18,11 @@ def get_concordance(wd, destination, width=200, lines=10000):
             outfile.write(o)
 
 
-get_concordance("legény", "legény.txt")
-get_concordance(["szegény", "legény"], "szlegyény.txt")
+#get_concordance("legény", "legény.txt")
+#get_concordance(["szegény", "legény"], "szlegyény.txt")
 
 # ha nem akarjuk elmenteni, csak nézni az outputot
 text.concordance(
     "legény", width=120, lines=100
 )  # width a karakterek számát, lines a kiírt sorokat szabályozza
-text.concordance(["szegény", "legény"], width=120, lines=100)
+text.concordance(["fél"], width=80, lines=100)

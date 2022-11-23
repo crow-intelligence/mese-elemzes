@@ -39,7 +39,7 @@ def get_collocates(wd):
         return "Word is not in dictionary"
 
 
-bgs, tgs, fgs = get_collocates("legény")
+bgs, tgs, fgs = get_collocates("szomorú")
 
 for e in bgs:
     print(f"bigram collocate {e}")

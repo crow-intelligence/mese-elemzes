@@ -17,7 +17,7 @@ for i in range(len(a.U)):
     wd_embedding = a.U[i]
     lst = list(m[i])
     indices = [j for j in range(len(lst)) if lst[j] > 0]
-    weights = [1-float(cosine(wd_embedding, a.U[k])) for k in indices]
+    weights = [1 - float(cosine(wd_embedding, a.U[k])) for k in indices]
     connected_wds = [a.vocabulary[j] for j in indices]
     G.add_node(i, label=a.vocabulary[i])
 
